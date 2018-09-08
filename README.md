@@ -1,4 +1,6 @@
 # HoNoSoFt.badgeIt.SonarQube
+[![Build status](https://ci.appveyor.com/api/projects/status/ys5p2vne56472xm1?svg=true)](https://ci.appveyor.com/project/Nordes/honosoft-badgeit-sonarqube)
+
 Badge your SonarQube results within your Confluence page or anywhere else (GitHub, GitLab, etc.).
 
 ## What does it uses under the hood
