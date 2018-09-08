@@ -1,0 +1,32 @@
+@startuml Application Flow
+title: Application Flow (Big picture)
+
+Actor "User" as user
+participant "e.g. Confluence" as confluence
+participant "HoNoSoFt BadgeIt" as badgeIt
+participant "SonarQube instance" as sq
+participant "Shields.io" as shields
+
+user-> confluence: Open a confluence page
+activate confluence
+
+note right
+Page containing details on all
+projects builds. 
+end note
+confluence->badgeIt: /api/badges/\nkey=MyApp:master&metric=Coverage
+activate badgeIt
+badgeIt-> sq: GetStats(project, branch, stats)
+activate sq
+sq-> badgeIt: Sonar Stats
+deactivate sq
+badgeIt-> shields: Generate svg badge
+activate shields
+shields-> badgeIt: svg content
+deactivate shields
+badgeIt-> confluence: svg content
+deactivate badgeIt
+confluence -> user: show the svg as an image
+
+deactivate confluence
+@enduml
