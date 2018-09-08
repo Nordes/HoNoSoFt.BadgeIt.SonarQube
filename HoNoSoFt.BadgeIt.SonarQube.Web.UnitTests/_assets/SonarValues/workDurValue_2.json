@@ -1,0 +1,41 @@
+﻿{
+  "component": {
+    "id": "AV-Y73MSfRTpBR4XUxWy",
+    "key": "OAP:develop",
+    "name": "something develop",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "sqale_index",
+        "periods": [
+          {
+            "index": 1,
+            "value": "70"
+          }
+        ]
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "sqale_index",
+      "name": "Technical Debt",
+      "description": "Total effort (in days) to fix all the issues on the component and therefore to comply to all the requirements.",
+      "domain": "Maintainability",
+      "type": "WORK_DUR",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "custom": false,
+      "bestValue": "0"
+    }
+  ],
+  "periods": [
+    {
+      "index": 1,
+      "mode": "previous_version",
+      "date": "2018-08-02T08:59:42+0200",
+      "parameter": "1.0.326"
+    }
+  ]
+}

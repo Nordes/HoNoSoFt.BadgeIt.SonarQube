@@ -1,0 +1,42 @@
+﻿{
+  "component": {
+    "id": "AV-Y73MSfRTpBR4XUxWy",
+    "key": "OAP:develop",
+    "name": "something develop",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "code_smells",
+        "value": "1",
+        "periods": [
+          {
+            "index": 1,
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "code_smells",
+      "name": "Code Smells",
+      "description": "Code Smells",
+      "domain": "Maintainability",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "custom": false,
+      "bestValue": "0"
+    }
+  ],
+  "periods": [
+    {
+      "index": 1,
+      "mode": "previous_version",
+      "date": "2018-08-02T08:59:42+0200",
+      "parameter": "1.0.326"
+    }
+  ]
+}

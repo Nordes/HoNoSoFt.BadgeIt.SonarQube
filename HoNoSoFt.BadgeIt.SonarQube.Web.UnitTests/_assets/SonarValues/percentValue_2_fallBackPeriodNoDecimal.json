@@ -1,0 +1,43 @@
+﻿{
+  "component": {
+    "id": "AV-Y73MSfRTpBR4XUxWy",
+    "key": "OAP:develop",
+    "name": "something develop",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "duplicated_lines_density",
+        "periods": [
+          {
+            "index": 1,
+            "value": "1.0"
+          }
+        ]
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "duplicated_lines_density",
+      "name": "Duplicated Lines (%)",
+      "description": "Duplicated lines balanced by statements",
+      "domain": "Duplications",
+      "type": "PERCENT",
+      "higherValuesAreBetter": false,
+      "qualitative": true,
+      "hidden": false,
+      "custom": false,
+      "decimalScale": 1,
+      "bestValue": "0.0",
+      "worstValue": "100.0"
+    }
+  ],
+  "periods": [
+    {
+      "index": 1,
+      "mode": "previous_version",
+      "date": "2018-08-02T08:59:42+0200",
+      "parameter": "1.0.326"
+    }
+  ]
+}

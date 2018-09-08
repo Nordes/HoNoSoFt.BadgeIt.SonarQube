@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>badgeIt - SonarQube Sample Page</title>
+    <link rel="stylesheet" href="./css/picnic.min.css">
+    <link rel="stylesheet" href="./css/site.css">
+</head>
+
+<body>
+    <nav class="transparent">
+        <a href="https://github.com/Nordes/HoNoSoFt.BadgeIt.SonarQube" data-tooltip="github repo." class="brand">
+            <img class="logo" src="./images/badgeIt.png" alt="badgeIt" />
+            <span class="color-white">- SonarQube Sample Page</span>
+        </a>
+        <div class="menu"  >
+            <a href="https://www.honosoft.com" data-tooltip="HoNoSoFt Site" class="tooltip-left"><img alt="HoNoSoFt" class="logo" src="./images/honosoft.png" /></a>
+        </div>
+    </nav>
+    <main>
+        <h1>What does it do?</h1>
+        <p>This project generate the badges for SonarQube. You
+            <b>must</b> have configured your appsettings.json of
+            <b>badgeIt</b> in order to make it work. Once the configuration is completed, you will be able to query your project
+            and then generate the badge without requiring the user to log into SonarQube.</p>
+        <p>In order to generate the badges, we use the service of
+            <a href="https://shields.io">Shield.io</a>. Please understand that this service can also stop you from requesting badges if you do too many
+            request. In the case you don't want to rely on the online service, there is the possibility of installing the
+            service itself on your server. Please follow this link in order to arrive to the
+            <a href="https://github.com/badges/shields">GitHub project</a>. Or if you even more lazy, use a
+            <a href="https://github.com/beevelop/docker-shields">docker image</a>
+        </p>
+        <p>In the future, maybe the badges JavaScript code will be directly included within this project.</p>
+        <fieldset class="flex two">
+            <label>
+                <input type="text" id="projectName" placeholder="Ex.: MyProject">
+            </label>
+            <label>
+                <input type="text" id="branch" placeholder="Ex.: master">
+            </label>
+        </fieldset>
+        <button onclick="updateBadges()">Load badges</button>
+
+        <div id="badgeContainer" class="flex three demo">
+        </div>
+    </main>
+
+    <script type="text/javascript" src="./js/site.js"></script>
+</body>
+</html>

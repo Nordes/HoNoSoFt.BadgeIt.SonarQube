@@ -1,0 +1,35 @@
+﻿{
+  "component": {
+    "id": "AV-Y73MSfRTpBR4XUxWy",
+    "key": "OAP:develop",
+    "name": "something develop",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "new_lines_to_cover",
+         "value": "2"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "new_lines_to_cover",
+      "name": "Lines to Cover on New Code",
+      "description": "Lines to cover on new code",
+      "domain": "Coverage",
+      "type": "INT",
+      "higherValuesAreBetter": false,
+      "qualitative": false,
+      "hidden": false,
+      "custom": false
+    }
+  ],
+  "periods": [
+    {
+      "index": 1,
+      "mode": "previous_version",
+      "date": "2018-08-02T08:59:42+0200",
+      "parameter": "1.0.326"
+    }
+  ]
+}

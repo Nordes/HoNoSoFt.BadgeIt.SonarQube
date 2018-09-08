@@ -1,0 +1,35 @@
+﻿{
+  "component": {
+    "id": "AV-Y73MSfRTpBR4XUxWy",
+    "key": "OAP:develop",
+    "name": "something develop",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "alert_status",
+        "value": "OK"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "key": "alert_status",
+      "name": "Quality Gate Status",
+      "description": "The project status with regard to its quality gate.",
+      "domain": "Releasability",
+      "type": "LEVEL",
+      "higherValuesAreBetter": true,
+      "qualitative": true,
+      "hidden": false,
+      "custom": false
+    }
+  ],
+  "periods": [
+    {
+      "index": 1,
+      "mode": "previous_version",
+      "date": "2018-08-02T08:59:42+0200",
+      "parameter": "1.0.326"
+    }
+  ]
+}
