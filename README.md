@@ -61,6 +61,10 @@ Install in your directory where you want to use it, then execute the command `do
 
 (The api Example can be seen from the default page)
 
+## Example of output 
+
+![Build status](./images/badgeIt-ResultSample.png)
+
 ## License
 
 ![License MIT](https://img.shields.io/github/license/Nordes/HoNoSoFt.BadgeIt.SonarQube.svg)
