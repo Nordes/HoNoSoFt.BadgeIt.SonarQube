@@ -14,7 +14,7 @@ function updateBadges() {
   var branchName = document.getElementById("branch").value;
   var badgeContainer = document.getElementById("badgeContainer");
 
-  if (!projectName || branchName) {
+  if (!projectName || !branchName) {
     alert("Please provide a valid project and branch name.")
     return;
   }
