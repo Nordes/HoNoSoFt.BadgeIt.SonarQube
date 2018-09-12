@@ -61,6 +61,9 @@ Install in your directory where you want to use it, then execute the command `do
 
 (The api Example can be seen from the default page)
 
+## Docker image
+A Docker image is available on [https://hub.docker.com/r/honosoft/badgeit/](HoNoSoFt DockerHub).
+
 ## Example of output 
 
 ![Build status](./images/badgeIt-ResultSample.png)
