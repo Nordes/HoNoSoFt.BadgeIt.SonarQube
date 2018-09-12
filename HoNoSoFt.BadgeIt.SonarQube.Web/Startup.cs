@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using System;
 
 namespace HoNoSoFt.BadgeIt.SonarQube.Web
 {
@@ -38,6 +40,11 @@ namespace HoNoSoFt.BadgeIt.SonarQube.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var sonarConfig = app.ApplicationServices.GetService<IOptions<SonarQubeApiConfig>>();
+            var badgesConfig = app.ApplicationServices.GetService<IOptions<BadgeApiConfig>>();
+            sonarConfig.Value.LoadFromEnvironmentVariables();
+            badgesConfig.Value.LoadFromEnvironmentVariables();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
