@@ -1,5 +1,6 @@
 # docker build -t honosoft/badgeit .
-# docker run -d -p 8080:80 --name testme honosoft/badgeit
+# docker run -d -p 8080:80 --name badgeit honosoft/badgeit
+# docker push honosoft/badgeit:latest
 FROM microsoft/dotnet:2.1.401-sdk-alpine3.7 AS build-env
 WORKDIR /app
 
