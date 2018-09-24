@@ -1,3 +1,5 @@
+# Normal docker image
+######################
 # docker build -t honosoft/badgeit .
 # docker run -d -p 8080:80 --name badgeit honosoft/badgeit
 # docker push honosoft/badgeit:latest
