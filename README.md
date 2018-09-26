@@ -26,7 +26,9 @@ Install in your directory where you want to use it, then execute the command `do
 
 ## API URI's
 
-- **Key:** The SonarQube key (i.e.: `Project:branch`) 
+- **Key:** The SonarQube key (i.e.: `Project`)
+- **Branch:** _(Optional)_ The SonarQube branch (default will be master, or the one configured within SonarQube)
+- **Label:** _(Optional)_ An overidding label in case we don't like th default label from the metric ;).
 - **Available metrics**
   - `QualityGate`: Quality gate status (ERROR, etc.)
   - `QualityGateDetails`: ...
@@ -57,6 +59,8 @@ Install in your directory where you want to use it, then execute the command `do
 |----|----|
 | /api/badges/key=`{key}` | By default, return the Quality Gate Status |
 | /api/badges/key=`{key}`&metric=`{metric}` | Return the badge based on the requested metric |
+| /api/badges/key=`{key}`&branch=`{branchName}`&metric=`{metric}` | Same as previous but provide the specific branch |
+| /api/badges/key=`{key}`&branch=`{branchName}`&label=`{overridingLabel}`&metric=`{metric}` | Same as previous, but override the label. |
 
 
 (The api Example can be seen from the default page)

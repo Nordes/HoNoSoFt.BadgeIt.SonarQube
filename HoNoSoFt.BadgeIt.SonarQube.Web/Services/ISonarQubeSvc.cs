@@ -5,6 +5,6 @@ namespace HoNoSoFt.BadgeIt.SonarQube.Web.Services
 {
     public interface ISonarQubeSvc
     {
-        Task<SonarQubeStats> FetchStatsAsync(string key, Metric metrics);
+        Task<SonarQubeStats> FetchStatsAsync(string key, string branch, Metric metrics);
     }
 }

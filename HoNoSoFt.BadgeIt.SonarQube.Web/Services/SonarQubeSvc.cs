@@ -26,11 +26,14 @@ namespace HoNoSoFt.BadgeIt.SonarQube.Web.Services
             _sonarQubeClient.DefaultRequestHeaders.Authorization = authHeader;
         }
 
-        public async Task<SonarQubeStats> FetchStatsAsync(string key, Metric metrics)
+        public async Task<SonarQubeStats> FetchStatsAsync(string key, string branch, Metric metrics)
         {
             // TODO Keep a 10/30 second cache to avoid calling the server on massive load.
             var result = await _sonarQubeClient.GetAsync(
-                $"measures/component?additionalFields=metrics&componentKey={System.Net.WebUtility.UrlEncode(key)}&metricKeys={metrics.ToSnakeCase()}");
+                $"measures/component?additionalFields=metrics" +
+                $"&componentKey={System.Net.WebUtility.UrlEncode(key)}"+ 
+                (string.IsNullOrEmpty(branch) ? string.Empty : $"&branch={System.Net.WebUtility.UrlEncode(branch)}") +
+                $"&metricKeys={metrics.ToSnakeCase()}");
 
             if (!result.IsSuccessStatusCode)
             {

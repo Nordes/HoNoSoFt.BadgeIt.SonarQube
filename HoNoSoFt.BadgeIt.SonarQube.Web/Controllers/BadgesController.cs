@@ -29,11 +29,12 @@ namespace HoNoSoFt.BadgeIt.SonarQube.Web.Controllers
         }
 
         [HttpGet()]
-        public async Task<ActionResult<System.IO.Stream>> Get([FromQuery]string key, [FromQuery]Metric metric, [FromQuery]string label)
+        public async Task<ActionResult<System.IO.Stream>> Get(
+            [FromQuery]string key,
+            [FromQuery]Metric metric,
+            [FromQuery]string branch = null,
+            [FromQuery]string label = null)
         {
-            var _ = key.Split(new[] { ':' });
-            var project = _[0];
-            var branch = _[1];
             string value;
             ShieldsColors color = ShieldsColors.YellowGreen;
             string officialLabel = null;
@@ -44,7 +45,7 @@ namespace HoNoSoFt.BadgeIt.SonarQube.Web.Controllers
                 metric = Metric.QualityGateDetails;
             }
 
-            var res = await _sonarQubeSvc.FetchStatsAsync(key, metric);
+            var res = await _sonarQubeSvc.FetchStatsAsync(key, branch, metric);
             var currentMeasure = res.Component.Measures.FirstOrDefault();
             if (currentMeasure == null)
             {

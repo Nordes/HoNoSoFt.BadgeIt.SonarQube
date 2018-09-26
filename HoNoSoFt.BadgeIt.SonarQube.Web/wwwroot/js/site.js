@@ -6,7 +6,7 @@ var metrics = [
   "QualityGateDetails", "DuplicatedBlocks", "NclocLanguageDistribution", "NewLinesToCover"];
 
 var uris = {
-  codeSmell: "./api/badges?key={project}:{branch}&metric={metric}",
+  codeSmell: "./api/badges?key={project}&{branch}metric={metric}",
 }
 
 function updateBadges() {
@@ -14,10 +14,11 @@ function updateBadges() {
   var branchName = document.getElementById("branch").value;
   var badgeContainer = document.getElementById("badgeContainer");
 
-  if (!projectName || !branchName) {
-    alert("Please provide a valid project and branch name.")
+  if (!projectName) {
+    alert("Please provide a valid project name.")
     return;
   }
+
   cleanBadgeContainer(badgeContainer);
 
   metrics.forEach(function (metricName) {
@@ -25,7 +26,7 @@ function updateBadges() {
       var img = document.createElement("img");
       img.setAttribute("src", uris.codeSmell
           .replace("{project}", projectName)
-          .replace("{branch}", branchName)
+          .replace("{branch}", (branchName !== "") ? 'branch=' + branchName + '&' : "")
           .replace("{metric}", metricName));
 
       div.appendChild(img);
