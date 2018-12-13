@@ -18,7 +18,7 @@ FROM microsoft/dotnet:2.1.3-aspnetcore-runtime-alpine3.7
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN addgroup -S badgeit && adduser -S -G badgeit badgeit
-
+RUN apk update; apk add curl
 ENV SONAR_API_KEY ""
 ENV SONAR_URI ""
 ENV SHIELDS_URI ""
