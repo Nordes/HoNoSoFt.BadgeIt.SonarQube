@@ -6,7 +6,7 @@ Badge your SonarQube results within your Confluence page or anywhere else (GitHu
 ## What does it uses under the hood
 
 * SonarQube server with API Key generated from an account
-* Shield.io (Official site, but can be overriden in the config if you prefer to install locally)
+* Shields.io (Official site, but can be overriden in the config if you prefer to install locally)
   * Maybe usage of local nodeJs server might happen in the futur.
 
 ## Configuration
